@@ -1,0 +1,9 @@
+import numpy as np
+
+print("Digite a raiz :")
+raiz = float(input())
+
+log = np.log2(raiz)
+
+aproximacao = (raiz + np.power(log,2))/(2*log) 
+print(aproximacao)
