@@ -1,0 +1,12 @@
+divisor = 1
+quociente = 0
+
+for dividendo in range (1000000) :
+    if dividendo % 2 == 0 :
+        quociente = quociente + 1/divisor
+    else :
+        quociente = quociente - 1/divisor
+
+    divisor = divisor + 2
+
+print(quociente*4)
