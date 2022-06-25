@@ -1,0 +1,82 @@
+print("Digite a quantidade de provas do semestre: ")
+provas = int(input())
+
+if provas == 2 :
+    print("Digite o peso da PRIMEIRA prova: ")
+    peso1 = float(input())
+    print( "Digite o peso da SEGUNDA prova")
+    peso2 = float(input())
+    pesototal = peso1 + peso2
+    if peso1 == 0 or peso2 == 2 :
+        print("Digite a sua nota da PROVA 1")
+        P1 = float(input())
+        print("Digite a sua nota da PROVA 2")
+        P2 = float(input())
+        media = (P1+P2)/2
+        if media > 5 :
+            print("Sua média é: ",round(media, 2))
+        else :
+            quanto_falta = 5-media 
+            print("Sua média é: ",round(media, 2))
+            print("Faltam ",quanto_falta,"para a média")
+    else :
+        print("Digite a sua nota da PROVA 1")
+        P1 = float(input())
+        print("Digite a sua nota da PROVA 2")
+        P2 = float(input())        
+        P1P = peso1*P1
+        P2P = peso2*P2
+        media = ((P1*peso1)+(P2*peso2))/pesototal
+        if media > 5 :
+            print("Sua média é: ",round(media, 2))
+        else :
+            quanto_falta = abs(((media*pesototal)/(peso1-peso2))-P1)
+            print("Sua média é: ",round(media, 2))
+            print("Faltam ",quanto_falta,"para a média")   
+
+if provas == 3 :
+    print("Digite o peso da PRIMEIRA prova: ")
+    peso1 = float(input())
+    print( "Digite o peso da SEGUNDA prova")
+    peso2 = float(input())
+    print( "Digite o peso da TERCEIRA prova")
+    peso3 = float(input())
+    pesototal = peso1+peso2+peso3
+    if peso1 == 0 or peso2 == 0 or peso3 == 0 :
+        pesototal=1
+        print("Digite a sua nota da PROVA 1")
+        P1 = float(input())
+        print("Digite a sua nota da PROVA 2")
+        P2 = float(input())
+        print("Digite a sua nota da PROVA 3")
+        P3 = float(input())
+        media = (P1+P2+P3)/3
+        if media > 5 :
+            print("Sua média é: ",media)
+        else :
+            quanto_falta = 5-media
+            print("Sua média é: ",round(media, 2))
+            print("Faltam ",round(quanto_falta, 2),"para a média")
+            
+        
+
+    else : 
+        print("Digite a sua nota da PROVA 1")
+        P1 = float(input())
+        P1P = P1*peso1
+        print("Digite a sua nota da PROVA 2")
+        P2 = float(input())
+        P2P = P1*peso2
+        print("Digite a sua nota da PROVA 3")
+        P3 = float(input())
+        P3P = P3*peso3
+        media = (P1P+P2P+P3P)/pesototal
+        if P2 == 0 and P3 == 0 :
+            quanto_falta = ((media*pesototal)-P1P)/(peso2-peso3)
+            
+            print("Sua média é: ",round(media, 2))
+            print("Faltam ",round(quanto_falta, 2),"para a média")
+        if P3 == 0 :
+            quanto_falta = ((media*pesototal)-P1P-P2P)/peso3
+            print("Sua média é: ",round(media, 2))
+            print("Faltam ",round(quanto_falta, 2),"para a média")
