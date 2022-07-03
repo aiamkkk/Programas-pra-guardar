@@ -1,0 +1,20 @@
+def nomebonitinho(nomedigitado):
+
+	
+	lugar = nomedigitado.split()
+	espacovazio = ""
+
+	
+	for i in range(len(lugar)-1):
+		nomedigitado = lugar[i]
+		
+		
+		espacovazio += (nomedigitado[0].upper()+'.')
+		
+	
+	espacovazio += lugar[-1].title()
+	
+	return espacovazio
+		
+nomedigitado = input()
+print(nomebonitinho(nomedigitado))
