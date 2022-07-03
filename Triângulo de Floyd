@@ -1,0 +1,11 @@
+linhas = int(input(f'Digite as linhas: '))
+
+colunas = 1
+
+for x in range(1,linhas+1):
+    
+    for i in range(1, x + 1):
+        print(f'{colunas:<4}', end='')
+        colunas = colunas+1
+    
+    print()
