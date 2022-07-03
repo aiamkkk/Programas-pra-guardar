@@ -1,0 +1,19 @@
+!pip install matplotlib==3.1.3
+!git clone https://github.com/Shellywell123/PyCrystallography/
+
+from PyCrystallography import unit_cell
+from PyCrystallography import lattice
+
+import matplotlib .pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+fig = plt.figure(0,figsize=[8,8])
+ax = fig.add_subplot(111,projection='3d')
+from PyCrystallography import unit_cell
+prim = unit_cell.NaCl(ax)
+
+fig = plt.figure(1,figsize=[8,8])
+ax = fig.add_subplot(111,projection='3d')
+from PyCrystallography import lattice
+lattice.make_lattice_3d(ax,prim)
+plt.show()
